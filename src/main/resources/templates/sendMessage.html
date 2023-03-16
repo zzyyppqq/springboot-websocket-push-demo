@@ -1,0 +1,19 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+
+<div>
+    <form method="post" th:action="@{/sendPushMessage}" th:object="${message}" class="loginForm">
+        <div class="loginInputDiv">
+            <label for="token" class="loginLabel"></label>
+            <input type="text" th:field="*{token}" id="token" class="loginInput" placeholder="token"/>
+        </div>
+        <div class="loginInputDiv">
+            <label for="msg" class="loginLabel"></label>
+            <input type="text" th:field="*{msg}" id="msg" class="loginInput" placeholder="msg"/>
+        </div>
+        <input type="submit" class="loginButton" value="send message"/>
+    </form>
+</div>
+
+</body>
+</html>
